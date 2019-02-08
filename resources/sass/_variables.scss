@@ -1,20 +1,29 @@
+/* Body */
+$body-bg:                             #f6f6f6;
+$body-color:                          #656565;
 
-// Body
-$body-bg: #f8fafc;
+/* Fonts */
+$font-size-base:                        0.9rem;
+$font-family-base:                      'Open Sans', sans-serif;
 
-// Typography
-$font-family-sans-serif: "Nunito", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+/* Primary Colors */
+$primary:                             #3d8aad;
+$secondary:                           #489b93;
+$success:                             #58be86;
+$info:                                #4ca5bb;
+$warning:                             #daae36;
+$danger:                              #c74646;
 
-// Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66D9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+/* Navbar */
+$navbar-padding-y:                    0;
+
+/* List Group */
+$list-group-item-padding-y:           0.5rem;
+$list-group-item-padding-x:           1rem;
+
+/* Buttons - Form */
+$input-btn-padding-x-sm:              0.4rem;
+
+/* Cards */
+$card-spacer-y:                       .5rem;
+$card-spacer-x:                       1rem;

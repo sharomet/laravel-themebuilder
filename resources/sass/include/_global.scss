@@ -1,0 +1,13 @@
+html, body, #app, #app > div {
+    height: 100%;
+}
+#app {
+    padding-bottom: 60px;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+textarea {
+    resize: none;
+}
