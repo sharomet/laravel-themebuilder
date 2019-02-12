@@ -2,6 +2,10 @@ export default {
     SET_THEMES(state, themes){
         state.themes = themes
     },
+    SET_VARIABLES(state, variables){
+        state.variables = variables
+    },
+
     SET_TOKEN(state, token) {
         state.token = token
     },

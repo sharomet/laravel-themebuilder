@@ -1,11 +1,15 @@
-html, body, #app, #app > div {
+html,
+body,
+#app,
+#app > div {
     height: 100%;
 }
 #app {
     padding-bottom: 60px;
 }
-a:hover,
-a:focus {
+a, .btn-link,
+a:hover, .btn-link:hover,
+a:focus, .btn-link:focus {
     text-decoration: none;
 }
 textarea {

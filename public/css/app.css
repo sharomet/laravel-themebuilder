@@ -9088,8 +9088,12 @@ body,
   padding-bottom: 60px;
 }
 
+a,
+.btn-link,
 a:hover,
-a:focus {
+.btn-link:hover,
+a:focus,
+.btn-link:focus {
   text-decoration: none;
 }
 
