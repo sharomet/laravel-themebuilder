@@ -8,6 +8,7 @@
                     <div class="accordion" id="formsAccardion">
 
                         <ThemeColors></ThemeColors>
+                        <GeneralContent></GeneralContent>
 
                     </div>
                 </form>
@@ -22,10 +23,13 @@
     import { mapActions } from 'vuex';
     import AsideComponent from '../aside/AsideComponent';
     import ThemeColors from './forms/ThemeColors';
+    import GeneralContent from "./forms/GeneralContent";
+
     export default {
         components: {
             AsideComponent,
-            ThemeColors
+            ThemeColors,
+            GeneralContent
         },
         data: () => {
             return {

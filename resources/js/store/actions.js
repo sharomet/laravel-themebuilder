@@ -5,6 +5,9 @@ export default {
     SET_VARIABLES({commit}, variables){
         commit('SET_VARIABLES', variables);
     },
+    SET_VAR({commit}, [variable, value]){
+        commit('SET_VAR', {variable, value});
+    },
 
     SET_USER({ commit }, user) {
         commit('SET_USER', user)
