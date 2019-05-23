@@ -1,17 +1,11 @@
-html,
-body,
-#app,
-#app > div {
-    height: 100%;
+a {
+	transition: 0.3s;
 }
-#app {
-    padding-bottom: 60px;
+a:hover,
+a:focus {
+	text-decoration: none;
 }
-a, .btn-link,
-a:hover, .btn-link:hover,
-a:focus, .btn-link:focus {
-    text-decoration: none;
-}
-textarea {
-    resize: none;
+
+html, body, .wrapper, #app {
+	height: 100%;
 }
