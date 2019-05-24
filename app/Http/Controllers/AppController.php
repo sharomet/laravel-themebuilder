@@ -1,8 +1,6 @@
 <?php
 namespace App\Http\Controllers;
-
-//use Illuminate\Http\Request;
-use DatabaseJson\Classes\Database;
+//use DatabaseJson\Classes\Database;
 
 class AppController extends Controller
 {
