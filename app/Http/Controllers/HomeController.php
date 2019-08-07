@@ -2,13 +2,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DatabaseJson\Classes\Database;
 use App\Theme;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        $ths = new Theme();
+        
         /*Database::create('themes2', array(
             '_id' => 'string',
             'name' => 'string',
@@ -34,7 +35,6 @@ class HomeController extends Controller
         return response()->json($themes[0]['variables']);*/
 
         //$themes = Database::table('themes2')->findAll()->asArray();
-        $ths = new Theme();
         return response()->json($ths->getDb()->findAll()->asArray());
     }
 }
