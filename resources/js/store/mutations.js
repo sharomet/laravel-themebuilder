@@ -3,6 +3,11 @@ export default {
         state.themes = themes.data;
     },
 
+    SET_VARIABLES(state, variables) {
+        console.log(variables.data);
+        state.variables = variables.data;
+    },
+
     SET_TOKEN(state, token) {
         state.token = token
     },

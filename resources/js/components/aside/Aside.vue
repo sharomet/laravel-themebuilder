@@ -29,9 +29,9 @@
 
 <script>
 export default {
-    props: {
-        title: String,
-        tools: Boolean,
-    }
+  props: {
+    title: String,
+    tools: Boolean,
+  }
 }
 </script>

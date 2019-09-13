@@ -9,8 +9,7 @@
             data-toggle="collapse"
             data-target="#primaryColors"
             aria-expanded="true"
-            aria-controls="primaryColors"
-          >
+            aria-controls="primaryColors">
             <span>Primary Colors</span>
           </a>
         </div>
@@ -19,29 +18,35 @@
           id="primaryColors"
           class="collapse show"
           aria-labelledby="primaryHeader"
-          data-parent="#accordionAside"
-        >
+          data-parent="#accordionAside">
           <div class="card-body">
             <div class="form-row">
-              <div class="col-sm-6 form-group">
-                <label for="primary">Primary</label>
-                <div class="input-group color">
-                  <input
-                    type="text"
-                    id="primary"
-                    name="primary"
-                    class="form-control"
-                    value="#38A8D1"
-                  >
-                  <div class="input-group-append input-color">
-                    <span class="input-group-text input-group-addon">
-                      <i></i>
-                    </span>
+
+              <div v-for="(variable, index) in getVariables" :key="index">
+                {{ index }}
+                <div v-for="(dat, index2) in variable" :key="index2">
+                  {{ index2 }}
+                  <div v-for="(data, index3) in dat" :key="index3">
+                    <label for="primary">{{ data }}</label>
+                    <div class="input-group color">
+                      <input
+                        type="text"
+                        id="primary"
+                        name="primary"
+                        class="form-control"
+                        value="#38A8D1">
+                      <div class="input-group-append input-color">
+                        <span class="input-group-text input-group-addon">
+                          <i></i>
+                        </span>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
 
-              <div class="col-sm-6 form-group">
+              <!--<div class="col-sm-6 form-group">
                 <label for="secondary">Secondary</label>
                 <div class="input-group color">
                   <input
@@ -49,8 +54,7 @@
                     id="secondary"
                     name="secondary"
                     class="form-control"
-                    value="#9A488D"
-                  >
+                    value="#9A488D">
                   <div class="input-group-append input-color">
                     <span class="input-group-text input-group-addon">
                       <i></i>
@@ -67,8 +71,7 @@
                     id="success"
                     name="success"
                     class="form-control"
-                    value="#3EAF88"
-                  >
+                    value="#3EAF88">
                   <div class="input-group-append input-color">
                     <span class="input-group-text input-group-addon">
                       <i></i>
@@ -97,8 +100,7 @@
                     id="warning"
                     name="warning"
                     class="form-control"
-                    value="#EF8936"
-                  >
+                    value="#EF8936">
                   <div class="input-group-append input-color">
                     <span class="input-group-text input-group-addon">
                       <i></i>
@@ -141,7 +143,8 @@
                     </span>
                   </div>
                 </div>
-              </div>
+              </div>-->
+
             </div>
           </div>
         </div>
@@ -179,8 +182,7 @@
             data-toggle="collapse"
             data-target="#collapseThree"
             aria-expanded="false"
-            aria-controls="collapseThree"
-          >
+            aria-controls="collapseThree">
             <span>Navbar</span>
           </a>
         </div>
@@ -188,11 +190,8 @@
           id="collapseThree"
           class="collapse"
           aria-labelledby="headingThree"
-          data-parent="#accordionAside"
-        >
-          <div
-            class="card-body"
-          >Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</div>
+          data-parent="#accordionAside">
+          <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</div>
         </div>
       </div>
     </div>
@@ -205,6 +204,14 @@ import Aside from "../../components/aside/Aside";
 export default {
   components: {
     Aside
+  },
+  computed: {
+    getVariables() {
+      return this.$store.getters.GET_VARIABLES;
+    }
+  },
+  mounted() {
+    this.$store.dispatch('FETCH_VARIABLES', this.$route.params.id);
   }
 };
 </script>

@@ -3,6 +3,8 @@ export default {
         return state.themes;
     },
 
+    GET_VARIABLES: (state) => state.variables,
+
     GET_USERS: (state) => {
         return state.users;
     }

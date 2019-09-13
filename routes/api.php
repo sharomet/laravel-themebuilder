@@ -6,3 +6,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/edit/{id}', 'EditController@index')->name('edit');

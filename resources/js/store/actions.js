@@ -7,6 +7,12 @@ export default {
              .catch(err => console.log(err));
     },
 
+    FETCH_VARIABLES({commit, state}, id) {
+        axios.get(state.apiUrl + 'edit/' + id)
+             .then(res => commit('SET_VARIABLES', res))
+             .catch(err => console.log(err));
+    },
+
     SET_USER({commit}, user) {
         commit('SET_USER', user)
     }
